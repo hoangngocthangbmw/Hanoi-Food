@@ -5,7 +5,7 @@ import SplashScreen from '../screens/splash_screens/SplashScreen';
 import Test1Screen from '../screens/test1_screens/Test1Screen';
 import Test2Screen from '../screens/test2_screens/Test2Screen';
 
-//When have Splash Screens
+
 const SplashStack = createStackNavigator({
     Splash: { screen: SplashScreen },
 }, {
@@ -13,7 +13,6 @@ const SplashStack = createStackNavigator({
             header: null
         })
     });
-
 
 const LoginStack = createStackNavigator({
     Login: { screen: LoginScreen },
