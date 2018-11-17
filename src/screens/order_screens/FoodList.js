@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
+
+import FoodsData from '../../data/FoodsData';
+import FoodListItem from '../order_screens/FoodListItem';
 
 export default class FoodList extends Component {
   constructor(props) {
@@ -11,7 +14,21 @@ export default class FoodList extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text> FoodList </Text>
+        <FlatList
+          data={FoodsData}
+          horizontal={true}
+          keyExtractor={(item, index) => {
+            return index.toString()
+          }}
+          renderItem={({ item, index }) => {
+            return (
+              <FoodListItem
+                item={item}
+                index={index}
+              />
+            )
+          }}
+        />
       </View>
     );
   }
@@ -19,6 +36,6 @@ export default class FoodList extends Component {
 
 const styles = StyleSheet.create({
   container: {
-
+    flex: 1,
   }
 })

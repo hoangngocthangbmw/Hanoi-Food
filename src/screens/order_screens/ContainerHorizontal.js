@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import R from '../../res/R';
 import FoodList from './FoodList';
 
@@ -16,9 +16,11 @@ export default class ContainerHorizontal extends Component {
       <View style={styles.container}>
         <View style={styles.viewTop}>
           <Text>{R.strings.order.text_title_1}</Text>
-          <Text>{R.strings.order.text_title_2}</Text>
+          <TouchableOpacity>
+            <Text>{R.strings.order.text_title_2}</Text>
+          </TouchableOpacity>
         </View>
-        <View style={{ flex: 6, backgroundColor: 'yellow' }}>
+        <View style={{ flex: 6 }}>
           <FoodList />
         </View>
       </View>
@@ -28,7 +30,6 @@ export default class ContainerHorizontal extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'grey',
     height: 200,
     marginTop: 8
   },
