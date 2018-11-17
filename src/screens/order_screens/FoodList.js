@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-export default class ListFoodHorizontal extends Component {
-
+export default class FoodList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +11,7 @@ export default class ListFoodHorizontal extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text> ListFoodHorizontal </Text>
+        <Text> FoodList </Text>
       </View>
     );
   }
@@ -20,8 +19,6 @@ export default class ListFoodHorizontal extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'grey',
-    height: 200,
-    marginTop: 8
+
   }
 })

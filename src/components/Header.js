@@ -16,7 +16,10 @@ export default class Header extends Component {
                     <Image style={styles.imageSearch} source={require('../asset/image/search.png')} resizeMode="contain" />
                 </View>
 
-                <TextInput style={styles.textInput}></TextInput>
+                <TextInput
+                    style={styles.textInput}
+                    placeholder={R.strings.header.text_search}
+                />
                 <View style={{ padding: 8, alignItems: 'center' }}>
                     <Image style={styles.imageNotification} source={require('../asset/image/notification.png')} resizeMode="contain" />
                 </View>
