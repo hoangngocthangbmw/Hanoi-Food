@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
 import R from '../../res/R';
 import Header from '../../components/Header';
-import ListFoodHorizontal from '../order_screens/ListFoodHorizontal';
+import ListFoodHorizontal from './ContainerHorizontal';
 import SlideOder from './SlideOrder';
 import GroupTab from './GroupTab';
 
