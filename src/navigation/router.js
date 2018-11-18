@@ -5,7 +5,6 @@ import SplashScreen from '../screens/splash_screens/SplashScreen';
 import OrderScreen from '../screens/order_screens/OrderScreen';
 import Test2Screen from '../screens/test2_screens/Test2Screen';
 
-
 const SplashStack = createStackNavigator({
     Splash: { screen: SplashScreen },
 }, {
@@ -31,9 +30,8 @@ const TabStack = createTabNavigator({
         })
     });
 
-
 const AppStack = createSwitchNavigator({
-    SplahStack: { screen: SplashScreen},
+    SplahStack: { screen: SplashScreen },
     LoginStack,
     TabStack
 });

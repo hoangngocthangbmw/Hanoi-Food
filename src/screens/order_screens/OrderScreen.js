@@ -26,7 +26,7 @@ export default class OrderScreen extends Component {
                     <Header />
                     <SlideOder />
                     <ListFoodHorizontal />
-                    <GroupTab></GroupTab>
+                    <GroupTab />
                 </ScrollView>
             </View>
         );

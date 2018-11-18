@@ -17,6 +17,7 @@ export default class FoodList extends Component {
         <FlatList
           data={FoodsData}
           horizontal={true}
+          showsHorizontalScrollIndicator={false}
           keyExtractor={(item, index) => {
             return index.toString()
           }}
