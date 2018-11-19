@@ -31,7 +31,8 @@ export default class ContainerHorizontal extends Component {
 const styles = StyleSheet.create({
   container: {
     height: 200,
-    marginTop: 8
+    marginTop: 8,
+    backgroundColor: 'white'
   },
 
   viewTop: {
@@ -40,6 +41,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 8,
-    backgroundColor: 'white'
   }
 })
