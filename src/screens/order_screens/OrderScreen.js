@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 
 import R from '../../res/R';
 import Header from '../../components/Header';
@@ -8,6 +8,13 @@ import SlideOder from './SlideOrder';
 import GroupTab from './GroupTab';
 
 export default class OrderScreen extends Component {
+
+    static navigationOptions = {
+        tabBarLable: 'Đặt món',
+        tabBarIcon: ({ }) => (
+            <Image source={require('../../asset/image/order.png')} />
+        )
+    }
 
     constructor(props) {
         super(props);
