@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Dimensions, Animated, TouchableOpacity } from 'react-native';
-import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
+import { TabView, SceneMap } from 'react-native-tab-view';
 
 import HighlightTab from '../order_screens/HighlightTab';
 import NearTab from '../order_screens/NearTab';
@@ -58,13 +58,6 @@ export default class GroupTab extends Component {
             <View style={styles.container}>
                 <TabView
                     navigationState={this.state}
-                    // renderScene={SceneMap({
-                    //     highlight: HighlightTab,
-                    //     near: NearTab,
-                    //     goodprice: GoodPrice,
-                    // })}
-                    // onIndexChange={index => this.setState({ index })}
-                    // initialLayout={{ width: Dimensions.get('window').width }}
                     renderScene={this._renderScene}
                     renderTabBar={this._renderTabBar}
                     onIndexChange={this._handleIndexChange}

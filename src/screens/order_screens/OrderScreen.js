@@ -5,23 +5,29 @@ import R from '../../res/R';
 import Header from '../../components/Header';
 import ListFoodHorizontal from './ContainerHorizontal';
 import SlideOder from './SlideOrder';
-import GroupTab from './GroupTab';
+// import GroupTab from '../order_screens/GroupTab';
+import Icon from 'react-native-vector-icons/Ionicons';
+import TabTest from './TabTest';
 
 export default class OrderScreen extends Component {
 
     static navigationOptions = {
-        tabBarLable: 'Đặt món',
-        tabBarIcon: ({ }) => (
-            <Image source={require('../../asset/image/order.png')} />
+        title: 'Đặt món',
+        tabBarIcon: ({ tintColor }) => (
+            // <Image
+            //     tintColor={tintColor}
+            //     source={require("../../asset/image/order.png")}
+            // />
+            <Icon name="ios-home" size={30} color={tintColor} />
         )
-    }
+    };
 
     constructor(props) {
         super(props);
         this.state = {
         };
     }
-
+    
     // _onClick = () => {
     // this.props.navigation.navigate('Test2');
     // }
@@ -33,7 +39,7 @@ export default class OrderScreen extends Component {
                     <Header />
                     <SlideOder />
                     <ListFoodHorizontal />
-                    <GroupTab />
+                    <TabTest />
                 </ScrollView>
             </View>
         );
