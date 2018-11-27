@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-
+import Icon from 'react-native-vector-icons/Ionicons';
 export default class PersionalScreen extends Component {
 
     static navigationOptions = {
-        tabBarLable: 'Cá nhân',
-        tabBarIcon: ({ }) => (
-            <Image source={require('../../asset/image/personal.png')} />
+        title: 'Cá nhân',
+        tabBarIcon: ({ tintColor }) => (
+            //   <Image
+            //     tintColor={tintColor}
+            //     source={require("../../asset/image/personal.png")}
+            //   />
+            <Icon name="ios-home" size={30} color={tintColor} />
         )
-    }
+    };
 
     constructor(props) {
         super(props);

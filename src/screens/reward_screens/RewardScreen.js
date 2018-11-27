@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet,Image } from 'react-native';
-
+import { View, Text, StyleSheet, Image } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 export default class RewardScreen extends Component {
 
     static navigationOptions = {
-        tabBarLable: 'Đổi quà',
-        tabBarIcon: ({ }) => (
-            <Image source={require('../../asset/image/reward.png')} />
+        title: 'Đổi quà',
+        tabBarIcon: ({ tintColor }) => (
+            // <Image
+            //     tintColor={tintColor}
+            //     source={require("../../asset/image/reward.png")}
+            // />
+            <Icon name="ios-home" size={30} color={tintColor} />
         )
-    }
+    };
 
     constructor(props) {
         super(props);
